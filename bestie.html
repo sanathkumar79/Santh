@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for My Honey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #fbeaff;
+            color: #333;
+        }
+        marquee{
+          color:red;
+          font-size:40px;
+        }
+
+        header {
+            background-color: #ff6ec7;
+            padding: 20px;
+            color: white;
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        section {
+            display: none; /* Sections are hidden by default */
+            padding: 40px;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+
+        .hidden {
+            display: block;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        .show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        footer {
+            background-color: #ff6ec7;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+  <marquee>13 Nov Honey First Day😊</marquee>
+    <header>
+        <h1>Welcome to Honey Website!</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('about')">About Us</a></li>
+                <li><a href="#" onclick="showSection('more')">More</a></li>
+                <li><a href="#" onclick="showSection('explore')">Explore Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hidden">
+        <h2>Hey pichi Honey!</h2>
+        <p>This website is specially made for you. You're an amazing person, and I just wanted to show my appreciation.</p>
+    </section>
+
+    <section id="about" class="hidden">
+        <h2>About Us</h2>
+        <p>We have shared so many amazing moments together, and I am grateful for our Journey. This website is just a small token of appreciation!</p>
+    </section>
+
+    <section id="more" class="hidden">
+        <h2>More</h2>
+        <p>These Website Under construction Honey ...</p>
+    </section>
+
+    <section id="explore" class="hidden">
+        <h2>Explore Us</h2>
+        <p>Want to know more? Keep exploring this space! More surprises coming soon.</p>
+    </section>
+
+    <footer>
+        <p>Made with 💛 by your bestiee.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll("section").forEach(section => {
+                section.style.display = "none";
+                section.classList.remove("show");
+            });
+
+            // Wait for 3 seconds, then show the selected section with animation
+            setTimeout(() => {
+                const section = document.getElementById(sectionId);
+                section.style.display = "block";
+                setTimeout(() => {
+                    section.classList.add("show");
+                }, 50); // Slight delay to trigger animation
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

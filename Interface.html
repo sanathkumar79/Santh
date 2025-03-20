@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user -scalable=no">
+  <title>Login page</title>
+  <link rel="stylesheet" href="interface.css">
+</head>
+
+<body>
+  <div class="sana">
+  
+ 
+  <div class="login-container">
+    <h1>Login</h1>
+    <br>
+    <h2>Enter your Bestie Name</h2>
+   <input type="text"id="BestieName">
+   <br>
+   <br>
+   <br>
+   <h2>Password of your Bestiee</h2>
+    <input type="text" 
+    id="BestiePassword">
+    <br>
+    <br>
+  <input type="checkbox"style="margin-left:30px;"><h4>Forgot Password?</h4>
+  <br>
+  <br>
+  <button onClick="validateLogin();">Honey click Here😊 </button></a>
+  <br>
+  <h2>Bestie</h2>
+    
+    
+  
+    
+    
+    
+  </div>
+  </div>
+ <script>
+  function validateLogin() {
+    var name = document.getElementById("BestieName").value.trim(); // Trim to remove extra spaces
+    var password = document.getElementById("BestiePassword").value.trim(); // Trim password
+
+    if (name === "SanathSrinija" && password === "HoneySana") {
+      alert("wait Honey 1sec...😊😊 "); // Optional success message
+      setTimeout(function() { 
+        window.location.href = "bestie.html"; // Redirect after 1 second
+      }, 1000);
+    } else {
+      alert("Noo Honey, you entered the wrong Name and Password 😩😩");
+    }
+  }
+</script>
+</body>
+
+</html>
